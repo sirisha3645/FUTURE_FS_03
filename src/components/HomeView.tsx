@@ -350,6 +350,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
             src="https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=1600" 
             alt="Royal Pastels Indian Bride Lehenga close-up" 
             className="h-full w-full object-cover object-center translate-y-[-4%]"
+            referrerPolicy="no-referrer"
           />
         </div>
 
@@ -457,6 +458,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                     src="https://images.unsplash.com/photo-1600948836101-f9ffdb5965e5?auto=format&fit=crop&q=80&w=500" 
                     alt="Luxury Ivory Salon Interior dressing suite" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-blush-pink shadow-soft aspect-square bg-warm-ivory flex flex-col justify-center p-4 text-center">
@@ -476,6 +478,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                     src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=500" 
                     alt="Bride Preparation Sessions" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -516,6 +519,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                   alt={service.title} 
                   loading="lazy"
                   className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-4 left-4 bg-white/95 rounded-full px-3 py-1 border border-blush-pink text-[9px] font-bold text-rose-gold uppercase tracking-widest leading-none shadow-xs">
                   ₹{service.price} onwards
@@ -714,6 +718,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
             src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1000" 
             alt="Before - Skin Preparation" 
             className="absolute inset-0 w-full h-full object-cover" 
+            referrerPolicy="no-referrer"
           />
           <div className="absolute top-4 left-4 z-20 bg-charcoal/70 text-white text-[9px] font-sans font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-xs">
             Dermal Prep Base (Before)
@@ -729,6 +734,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
               alt="After - Royal Bridal Makeup" 
               className="absolute inset-0 w-full h-full object-cover"
               style={{ width: '100%', height: '100%', maxWidth: 'none' }}
+              referrerPolicy="no-referrer"
             />
             {/* After Tag on the right top */}
             {sliderVal > 15 && (
@@ -801,6 +807,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                     alt={expert.name} 
                     loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="space-y-1.5 font-sans">
@@ -866,6 +873,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                     src={test.photo} 
                     alt={test.name} 
                     className="h-12 w-12 rounded-full object-cover border border-rose-gold/20 shadow-xs shrink-0" 
+                    referrerPolicy="no-referrer"
                   />
                   <div className="font-sans text-left">
                     <h4 className="text-xs font-bold text-charcoal tracking-wide">{test.name}</h4>
@@ -949,7 +957,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
               id={`beauty-tip-grid-${idx}`}
             >
               <div className="relative aspect-[16/10] bg-warm-ivory">
-                <img src={tip.img} alt={tip.title} className="w-full h-full object-cover" />
+                <img src={tip.img} alt={tip.title} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 <div className="absolute top-4 left-4 bg-white/95 rounded-full px-3 py-1 border border-blush-pink text-[9px] font-bold text-rose-gold uppercase tracking-wider">
                   {tip.category}
                 </div>
@@ -1000,6 +1008,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                 alt={post.tag} 
                 loading="lazy" 
                 className="w-full h-full object-cover group-hover:scale-[1.08] transition-transform duration-500" 
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center space-y-1">
                 <Instagram className="h-6 w-6 text-[#B76E79]" />

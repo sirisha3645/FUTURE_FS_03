@@ -41,6 +41,7 @@ export default function BlogView() {
               src={selectedArticle.image} 
               alt={selectedArticle.title} 
               className="h-full w-full object-cover"
+              referrerPolicy="no-referrer"
             />
           </div>
 
@@ -147,6 +148,7 @@ export default function BlogView() {
                     src={post.image} 
                     alt={post.title} 
                     className="h-full w-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4 rounded-full bg-white/95 border border-blush-pink px-3 py-1 text-[9.5px] font-bold text-rose-gold font-sans tracking-widest uppercase">
                     {post.category}

@@ -109,6 +109,7 @@ export default function GalleryView() {
               src={beforeAfterItems[0].afterImage} 
               alt="After look"
               className="absolute inset-0 h-full w-full object-cover pointer-events-none"
+              referrerPolicy="no-referrer"
             />
             <div className="absolute right-4 bottom-4 z-10 rounded-full bg-white/90 border border-blush-pink px-4 py-1 text-[10px] text-rose-gold font-sans font-bold tracking-wider uppercase">
               After (Airbrush Royal Glow)
@@ -124,6 +125,7 @@ export default function GalleryView() {
                 alt="Before look"
                 className="absolute top-0 left-0 h-[360px] sm:h-[450px] object-cover"
                 style={{ width: '100%', minWidth: '100%', maxWidth: 'none' }}
+                referrerPolicy="no-referrer"
               />
               <div className="absolute left-4 bottom-4 z-10 rounded-full bg-white/90 border border-blush-pink px-4 py-1 text-[10px] text-rose-gold font-sans font-bold tracking-wider uppercase">
                 Before
@@ -179,6 +181,7 @@ export default function GalleryView() {
                   alt={item.title} 
                   loading="lazy"
                   className="w-full h-auto object-cover max-h-[500px]"
+                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Visual Hover details bar */}
@@ -224,6 +227,7 @@ export default function GalleryView() {
               src={filteredItems[lightboxIndex].image} 
               alt={filteredItems[lightboxIndex].title}
               className="max-h-[70vh] rounded-2xl object-contain border border-blush-pink"
+              referrerPolicy="no-referrer"
             />
             <div className="text-center space-y-1 bg-white/95 border border-blush-pink rounded-2xl py-3 px-6 shadow-md max-w-md">
               <span className="font-sans text-[9px] font-bold uppercase tracking-widest text-rose-gold">

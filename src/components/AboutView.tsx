@@ -29,6 +29,7 @@ export default function AboutView() {
               src="https://images.unsplash.com/photo-1600948836101-f9ffdb5965e5?auto=format&fit=crop&q=80&w=800" 
               alt="Ornate Traditional Royal Indian Wedding Decor" 
               className="rounded-3xl shadow-soft border border-blush-pink relative z-10"
+              referrerPolicy="no-referrer"
             />
           </div>
         </div>
@@ -94,6 +95,7 @@ export default function AboutView() {
                   src={stylist.image} 
                   alt={stylist.name} 
                   className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="p-6 space-y-2">

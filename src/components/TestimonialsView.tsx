@@ -102,6 +102,7 @@ export default function TestimonialsView() {
               src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1200" 
               alt="Artisan hair coloring session review" 
               className="h-full w-full object-cover object-center group-hover/video:scale-[1.02] transition-transform duration-500"
+              referrerPolicy="no-referrer"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent" />
@@ -156,6 +157,7 @@ export default function TestimonialsView() {
                   src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=450" 
                   className="absolute inset-0 w-full h-full object-cover opacity-50"
                   alt="Traditional Bride feedback"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="relative z-10 space-y-2">
                   <Play className="h-10 w-10 text-rose-gold fill-current mx-auto animate-ping" />
@@ -184,7 +186,7 @@ export default function TestimonialsView() {
                   key={rev.id} 
                   className="bg-white border border-blush-pink p-6 rounded-3xl shadow-soft hover:shadow-md transition-all flex space-x-4 font-sans"
                 >
-                  <img src={rev.avatar} alt={rev.author} className="h-12 w-12 rounded-full shrink-0 object-cover border border-blush-pink" />
+                  <img src={rev.avatar} alt={rev.author} className="h-12 w-12 rounded-full shrink-0 object-cover border border-blush-pink" referrerPolicy="no-referrer" />
                   <div className="space-y-2 flex-1">
                     <div className="flex items-start justify-between">
                       <div>

@@ -19,6 +19,7 @@ import ContactView from './components/ContactView';
 import PremiumAIQuiz from './components/PremiumAIQuiz';
 import PremiumCostCalculator from './components/PremiumCostCalculator';
 import AdminDashboard from './components/AdminDashboard';
+import InternshipReportView from './components/InternshipReportView';
 import { Booking } from './types';
 import { Sparkles } from 'lucide-react';
 
@@ -158,6 +159,10 @@ export default function App() {
       case 'admin':
         return (
           <AdminDashboard />
+        );
+      case 'report':
+        return (
+          <InternshipReportView />
         );
       case 'home':
       default:

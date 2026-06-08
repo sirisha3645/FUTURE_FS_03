@@ -143,6 +143,7 @@ export default function ServicesView({ setCurrentPage, setSelectedServiceId }: S
                     alt={service.title} 
                     loading="lazy"
                     className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-550"
+                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 right-4 rounded-full bg-white/95 px-4 py-1.5 text-xs font-bold text-rose-gold shadow-sm border border-blush-pink">
                     ₹{service.price.toLocaleString('en-IN')}
