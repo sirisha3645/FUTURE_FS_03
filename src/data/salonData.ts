@@ -354,7 +354,7 @@ export const membershipPlans = [
 
 export const bridalPackages = [
   {
-    name: 'Silver Bridal Package',
+    name: 'Silver Bride',
     price: 15000,
     subtitle: 'Classic Grace',
     features: [
@@ -366,7 +366,7 @@ export const bridalPackages = [
     ]
   },
   {
-    name: 'Gold Bridal Package',
+    name: 'Golden Bride',
     price: 25000,
     subtitle: 'The Photographic Masterpiece',
     features: [
@@ -379,7 +379,7 @@ export const bridalPackages = [
     ]
   },
   {
-    name: 'Platinum Bridal Package',
+    name: 'Royal Bride',
     price: 45000,
     subtitle: 'High-Fashion Extravaganza',
     features: [
@@ -392,7 +392,7 @@ export const bridalPackages = [
     ]
   },
   {
-    name: 'Royal Maharani Package',
+    name: 'Maharani Experience',
     price: 75000,
     subtitle: 'The Empress Luxury Suite',
     features: [

@@ -83,7 +83,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-blush-pink bg-white text-rose-gold hover:bg-baby-pink hover:scale-115 transition-all shadow-sm">
                 <Twitter className="h-4 w-4" />
               </a>
-              <a href="https://wa.me/9140555722" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-blush-pink bg-white text-emerald-600 hover:bg-emerald-50 hover:text-white hover:scale-115 transition-all shadow-sm">
+              <a href="https://wa.me/919885501034" target="_blank" rel="noreferrer" className="flex h-9 w-9 items-center justify-center rounded-full border border-blush-pink bg-white text-emerald-600 hover:bg-emerald-50 hover:text-white hover:scale-115 transition-all shadow-sm">
                 <MessageCircle className="h-4 w-4" />
               </a>
             </div>
@@ -95,17 +95,17 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               RESERVE SECURELY
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3 text-sm text-soft-grey">
+              <li className="flex items-start space-x-3 text-sm text-soft-grey font-sans">
                 <MapPin className="h-4 w-4 text-rose-gold shrink-0 mt-0.5" />
-                <span>Road No. 12, Banjara Hills<br />Hyderabad, Telangana 500034</span>
+                <span>Plot No. 82, Film Nagar<br />Jubilee Hills Road, Hyderabad 500096</span>
               </li>
-              <li className="flex items-center space-x-3 text-sm text-soft-grey">
+              <li className="flex items-center space-x-3 text-sm text-soft-grey font-sans">
                 <Phone className="h-4 w-4 text-rose-gold" />
                 <span>+91 40 555-SAANVI</span>
               </li>
-              <li className="flex items-center space-x-3 text-sm text-soft-grey">
+              <li className="flex items-center space-x-3 text-sm text-soft-grey font-sans">
                 <Mail className="h-4 w-4 text-rose-gold" />
-                <span>concierge@saanvibridal.com</span>
+                <span>shringar@saanvibridallounge.co.in</span>
               </li>
             </ul>
           </div>
@@ -224,7 +224,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
       {/* Floating Sticky Live WhatsApp Button widget on the screen bottom-right */}
       <div className="fixed bottom-6 right-6 z-40 group">
         <a 
-          href="https://wa.me/9140555722" 
+          href="https://wa.me/919885501034" 
           target="_blank" 
           rel="noreferrer" 
           className="flex items-center space-x-2 bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 hover:shadow-xl hover:scale-105 transition-all rounded-full p-3.5 border border-emerald-400/20"
