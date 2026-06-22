@@ -81,9 +81,9 @@ export default function ContactView() {
         <div className="lg:col-span-5 space-y-8">
           
           <div className="bg-white border border-blush-pink rounded-3xl p-6 sm:p-8 space-y-6 shadow-soft">
-            <h3 className="font-serif text-xl font-light text-charcoal">Saanvi Royal Lounge</h3>
+            <h3 className="font-serif text-xl font-light text-charcoal">Saanvi Royal Saalon</h3>
             <p className="text-xs text-soft-grey leading-relaxed">
-              Our flagship physical lounge is situated on Road No. 10 inside Banjara Hills, Hyderabad's boutique fashion precinct, offering guarded VIP parking suites for upcoming brides.
+              Our flagship physical saalon is situated on Road No. 10 inside Banjara Hills, Hyderabad's boutique fashion precinct, offering guarded VIP parking suites for upcoming brides.
             </p>
 
             <ul className="space-y-4.5 text-xs font-semibold text-soft-grey font-sans">
@@ -101,7 +101,7 @@ export default function ContactView() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-rose-gold" />
-                <span className="text-charcoal">concierge@saanvibridallounge.com</span>
+                <span className="text-charcoal">concierge@saanvibridalsaalon.com</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-rose-gold shrink-0 mt-0.5" />
@@ -137,7 +137,7 @@ export default function ContactView() {
                   <MapPin className="h-5 w-5" />
                 </div>
                 <span className="bg-white text-rose-gold border border-blush-pink text-[9px] font-sans font-bold rounded-lg px-2.5 py-1 whitespace-nowrap uppercase tracking-widest shadow-xs">
-                  Saanvi Luxury Lounge
+                  Saanvi Luxury Saalon
                 </span>
               </div>
 

@@ -16,7 +16,7 @@ export default function FaqView() {
       <section className="text-center space-y-4">
         <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-rose-gold block">Continuous Clarity</span>
         <h1 className="font-serif text-4xl sm:text-5xl font-light text-charcoal">
-          Frequently Asked <span className="font-semibold text-rose-gold">Lounge Questions</span>
+          Frequently Asked <span className="font-semibold text-rose-gold">Saalon Questions</span>
         </h1>
         <p className="max-w-xl mx-auto text-xs sm:text-sm text-soft-grey leading-relaxed">
           Everything you need to know about scheduling, saree pleating hours, custom pre-wedding packages, and luxury kundan support.

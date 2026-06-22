@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Twitter, MessageCircle, ArrowRight, CheckCircle2, Award, Loader2 } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, Facebook, Instagram, Twitter, MessageCircle, ArrowRight, CheckCircle2, Award, Loader2, Scissors } from 'lucide-react';
 import { addSubscriber } from '../firebase/newsletter';
 
 interface FooterProps {
@@ -59,14 +59,14 @@ export default function Footer({ setCurrentPage }: FooterProps) {
           <div className="space-y-4">
             <div className="flex items-center space-x-2.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-baby-pink via-blush-pink to-rose-gold shadow-sm">
-                <Award className="h-5 w-5 text-rose-gold" />
+                <Scissors className="h-5 w-5 text-rose-gold" />
               </div>
               <div>
                 <span className="font-serif text-xl font-bold tracking-widest text-charcoal uppercase block leading-none">
                   SAANVI
                 </span>
                 <span className="block text-[8.5px] tracking-[0.25em] font-semibold text-rose-gold uppercase mt-1">
-                  Royal Bridal Lounge
+                  Royal Bridal Saalon
                 </span>
               </div>
             </div>
@@ -105,7 +105,7 @@ export default function Footer({ setCurrentPage }: FooterProps) {
               </li>
               <li className="flex items-center space-x-3 text-sm text-soft-grey font-sans">
                 <Mail className="h-4 w-4 text-rose-gold" />
-                <span>shringar@saanvibridallounge.co.in</span>
+                <span>shringar@saanvibridalsaalon.co.in</span>
               </li>
             </ul>
           </div>

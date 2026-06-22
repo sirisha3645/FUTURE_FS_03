@@ -79,7 +79,7 @@ export default function GalleryView() {
           Our Bridal <span className="font-semibold text-rose-gold">Aesthetic Gallery</span>
         </h1>
         <p className="max-w-2xl mx-auto text-xs sm:text-sm text-soft-grey leading-relaxed">
-          Explore stunning, high-definition captures of our royal Hyderabad brides, heritage jasmines styling, sweatproof airbrush contouring, and our clean bento-inspired lounge layout.
+          Explore stunning, high-definition captures of our royal Hyderabad brides, heritage jasmines styling, sweatproof airbrush contouring, and our clean bento-inspired saalon layout.
         </p>
       </section>
 

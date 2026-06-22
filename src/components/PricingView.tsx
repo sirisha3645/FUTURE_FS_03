@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Check, HelpCircle, Award, Sparkles, Gift, DollarSign, Users, ShieldAlert, X } from 'lucide-react';
+import { Check, HelpCircle, Award, Sparkles, Gift, DollarSign, Users, ShieldAlert, X, Percent, Calendar } from 'lucide-react';
 import { servicesData, membershipPlans, bridalPackages } from '../data/salonData';
 
 interface PricingViewProps {
@@ -43,14 +43,47 @@ export default function PricingView({ setCurrentPage, setSelectedServiceId }: Pr
       {/* 1. Header Banner */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 text-center space-y-4">
         <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-rose-gold block">
-          Transparent Elegance
+          Aesthetic Value & Quality
         </span>
         <h1 className="font-serif text-4xl sm:text-5xl font-light text-charcoal leading-tight">
           Our Imperial <span className="font-semibold text-rose-gold">Bridal Pricing Menu</span>
         </h1>
         <p className="max-w-2xl mx-auto text-xs sm:text-sm text-soft-grey leading-relaxed">
-          Unrivaled quality with zero hidden additions. We combine absolute clinical skincare standards with customizable, premium pre-wedding packages and VIP on-location bridal support.
+          Unrivaled beauty artistry combined with accessible, budget-conscious packages. We customize every service blueprint to respect your financial layout without ever compromising on Mac or Temptu luxury grade.
         </p>
+
+        {/* Cohesive Budget-Inclusive Visual Badges */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto mt-8 text-left">
+          <div className="bg-white border border-blush-pink/60 rounded-2xl p-4.5 shadow-soft flex items-start space-x-3">
+            <div className="flex h-8 h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-baby-pink text-rose-gold mt-0.5">
+              <Percent className="h-4 w-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="text-xs font-bold text-charcoal uppercase tracking-wider">Tailored To All Budgets</h4>
+              <p className="text-[10.5px] text-soft-grey leading-relaxed">Fully customizable. Skip high bundles; build your custom look ala-carte to control expenses accurately.</p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-blush-pink/60 rounded-2xl p-4.5 shadow-soft flex items-start space-x-3">
+            <div className="flex h-8 h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-baby-pink text-rose-gold mt-0.5">
+              <Sparkles className="h-4 w-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="text-xs font-bold text-charcoal uppercase tracking-wider">3-Step Easy Installments</h4>
+              <p className="text-[10.5px] text-soft-grey leading-relaxed">Stress-free budgeting split into three comfortable milestone transactions leading up to your wedding day.</p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-blush-pink/60 rounded-2xl p-4.5 shadow-soft flex items-start space-x-3">
+            <div className="flex h-8 h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-baby-pink text-rose-gold mt-0.5">
+              <Calendar className="h-4 w-4" />
+            </div>
+            <div className="space-y-0.5">
+              <h4 className="text-xs font-bold text-charcoal uppercase tracking-wider">₹2,000 Booking Token</h4>
+              <p className="text-[10.5px] text-soft-grey leading-relaxed">Lock down your special date on our crew calendar instantly with an incredibly low, refundable placeholder deposit.</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Dynamic Feedback Modal/Notification */}
@@ -180,7 +213,7 @@ export default function PricingView({ setCurrentPage, setSelectedServiceId }: Pr
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 bg-baby-pink/30 py-20 border-y border-blush-pink/60 rounded-3xl">
         <div className="text-center space-y-3 max-w-2xl mx-auto mb-16">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-rose-gold block">Continuous Wellness</span>
-          <h2 className="font-serif text-4xl font-light text-charcoal">Saanvi Elite Lounge Memberships</h2>
+          <h2 className="font-serif text-4xl font-light text-charcoal">Saanvi Elite Saalon Memberships</h2>
           <p className="text-xs sm:text-sm text-soft-grey">
             Consistently glow throughout your grand social periods with our luxury monthly savings subscriptions. Enjoy customized trial access.
           </p>
@@ -267,7 +300,7 @@ export default function PricingView({ setCurrentPage, setSelectedServiceId }: Pr
                 <td>1x Facial and 1x Body Massage</td>
               </tr>
               <tr>
-                <td className="py-3.5 font-bold text-charcoal">Lounge Retail Cosmetics Saving</td>
+                <td className="py-3.5 font-bold text-charcoal">Saalon Retail Cosmetics Saving</td>
                 <td>10% Off</td>
                 <td className="text-rose-gold font-bold">15% Off</td>
                 <td>25% Off</td>

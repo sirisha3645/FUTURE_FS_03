@@ -19,7 +19,10 @@ import {
   BookOpen,
   Shield,
   Percent,
-  Compass
+  Compass,
+  X,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
 import { submitContactMessage } from '../firebase/contact';
 
@@ -77,10 +80,38 @@ const TraditionalMandalaGrid = () => (
   </div>
 );
 
+const instagramFeed = [
+  { id: 1, img: '/src/assets/images/bridal_closeup_gold_1781933365235.jpg', tag: '#SaanviBrides', type: 'Bridal Close-Up' },
+  { id: 2, img: '/src/assets/images/south_indian_bride_silk_saree_1781931258968.jpg', tag: '#RoyalKanchipuram', type: 'Kanchipuram Glow' },
+  { id: 3, img: '/src/assets/images/bridal_mehendi_hands_photo_1781930712668.jpg', tag: '#SymmetricalHenna', type: 'Bridal Mehendi' },
+  { id: 4, img: '/src/assets/images/bridal_jasmine_jada_1781933347654.jpg', tag: '#JasmineJada', type: 'Jasmine Styling' },
+  { id: 5, img: '/src/assets/images/luxury_marble_salon_1781933378855.jpg', tag: '#MarbleSalon', type: 'Luxury Saalon' },
+  { id: 6, img: '/src/assets/images/saree_draping_pleats_1781933394077.jpg', tag: '#SilkPleating', type: 'Saree Draping' }
+];
+
 export default function HomeView({ setCurrentPage }: HomeViewProps) {
   
   // Interactive Transformation Slider State
   const [sliderVal, setSliderVal] = useState<number>(50);
+
+  // Lightbox modal state for Instagram Feed
+  const [activeLightboxImg, setActiveLightboxImg] = useState<{ id: number; img: string; tag: string; type: string } | null>(null);
+
+  const handlePrevLightbox = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!activeLightboxImg) return;
+    const currentIndex = instagramFeed.findIndex(item => item.id === activeLightboxImg.id);
+    const prevIndex = (currentIndex - 1 + instagramFeed.length) % instagramFeed.length;
+    setActiveLightboxImg(instagramFeed[prevIndex]);
+  };
+
+  const handleNextLightbox = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!activeLightboxImg) return;
+    const currentIndex = instagramFeed.findIndex(item => item.id === activeLightboxImg.id);
+    const nextIndex = (currentIndex + 1) % instagramFeed.length;
+    setActiveLightboxImg(instagramFeed[nextIndex]);
+  };
 
   // Trust numbers configuration to avoid empty states
   const trustStats = [
@@ -102,7 +133,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
     {
       id: 'bridal-makeup',
       title: 'Royal Shubh Vivah Bridal Makeup',
-      img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600',
+      img: '/src/assets/images/royal_indian_bride_makeup_1781929843081.jpg',
       description: 'Our signature luxury treatment close-up look. Flawless high-definition Base designed to endure photography spotlights and intense warm wedding environments.',
       duration: '150 mins',
       price: '18,500'
@@ -110,7 +141,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
     {
       id: 'hair-styling',
       title: 'Couture Hair Styling & Jasmine Sculpting',
-      img: 'https://images.unsplash.com/photo-1596178060810-729ab7912440?auto=format&fit=crop&q=80&w=600',
+      img: '/src/assets/images/bridal_jasmine_jada_1781933347654.jpg',
       description: 'Couture braids, traditional floral braids adorned with fresh jasmine wreaths, messy royal top buns, and elegant crown jewelry pinning.',
       duration: '60 mins',
       price: '3,500'
@@ -118,7 +149,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
     {
       id: 'facials',
       title: 'Vedic Saffron HydraGlow Dermal Facial',
-      img: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600',
+      img: '/src/assets/images/pre_bridal_skincare_facial_1781931592613.jpg',
       description: 'Luxury cellular prep treatment and advanced dermaplaning mask. Uses rich saffron water, goat milk, and pure raw almonds to plump up deep tone.',
       duration: '75 mins',
       price: '4,500'
@@ -126,7 +157,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
     {
       id: 'mehendi-services',
       title: 'Traditional Intricate Bridal Mehendi',
-      img: 'https://images.unsplash.com/photo-1612547087680-aa16032af419?auto=format&fit=crop&q=80&w=600',
+      img: '/src/assets/images/bridal_mehendi_pose_portrait_1781930949506.jpg',
       description: 'Detailed hand-drawn mandalas, custom jaali, peacock designs and traditional vows representations, crafted with 100% home-rolled mahogany organic henna.',
       duration: '240 mins',
       price: '8,000'
@@ -225,7 +256,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
       exp: '20+ Years Experience',
       certification: 'Certified by MAC Global & Christine Valmy London',
       specialty: 'Contemporary Royal HD Makeup & Couture Draping',
-      photo: 'https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&q=80&w=400'
+      photo: '/src/assets/images/saanvi_reddy_headshot_1781933765509.jpg'
     },
     {
       name: 'Ananya Sen',
@@ -233,7 +264,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
       exp: '12 Years Experience',
       certification: 'Temptu New York Airbrush Certification',
       specialty: 'Weightless Temperature Airbrushing & Precision Lashes',
-      photo: 'https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&q=80&w=400'
+      photo: '/src/assets/images/ananya_sen_headshot_1781933781463.jpg'
     },
     {
       name: 'Priya Sharma',
@@ -241,7 +272,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
       exp: '8 Years Experience',
       certification: 'Schwarzkopf Professional Braiding Academy Diploma',
       specialty: 'Traditional South Indian Jada Braiding & Floral Settings',
-      photo: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=400'
+      photo: '/src/assets/images/priya_sharma_headshot_1781933796149.jpg'
     },
     {
       name: 'Dr. Rohit Rao',
@@ -249,7 +280,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
       exp: '10 Years Experience',
       certification: 'Bachelor of Ayurvedic Skin Therapies & London Academy',
       specialty: 'Ayurvedic Preparation Masks & Sandalwood Skin Lifting',
-      photo: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=400'
+      photo: '/src/assets/images/dr_rohit_rao_headshot_1781933810578.jpg'
     }
   ];
 
@@ -275,21 +306,9 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
       name: 'Dr. Divya Rao',
       city: 'Secunderabad Bride',
       role: 'Royal Bride Package',
-      photo: 'https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&q=80&w=400',
+      photo: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=400',
       story: 'Exceptional hygiene benchmarks. From the autoclaved cosmetic brushes to the warm almond-infused foot spa rituals, they made me feel like real royalty. I walked onto the wedding stage feeling serene and beautiful.'
     }
-  ];
-
-  // ----------------------------------------------------
-  // SECTION 9 — INSTAGRAM SHOWCASE IMAGES (Mehendi, hair styling, jewelry, makeup closeups, salon interior)
-  // ----------------------------------------------------
-  const instagramFeed = [
-    { id: 1, img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=400', tag: '#SaanviBrides', type: 'Bridal Close-Up' },
-    { id: 2, img: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=400', tag: '#HeirloomKundan', type: 'Bridal Jewelry' },
-    { id: 3, img: 'https://images.unsplash.com/photo-1612547087680-aa16032af419?auto=format&fit=crop&q=80&w=400', tag: '#SymmetricalHenna', type: 'Bridal Mehendi' },
-    { id: 4, img: 'https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&q=80&w=400', tag: '#JasmineJada', type: 'Jasmine Styling' },
-    { id: 5, img: 'https://images.unsplash.com/photo-1600948836101-f9ffdb5965e5?auto=format&fit=crop&q=80&w=400', tag: '#MarbleSalon', type: 'Luxury Lounge' },
-    { id: 6, img: 'https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&q=80&w=400', tag: '#SilkPleating', type: 'Saree Draping' }
   ];
 
   // ----------------------------------------------------
@@ -455,7 +474,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
               <div className="space-y-4">
                 <div className="rounded-2xl overflow-hidden border border-blush-pink shadow-soft aspect-[3/4]">
                   <img 
-                    src="https://images.unsplash.com/photo-1600948836101-f9ffdb5965e5?auto=format&fit=crop&q=80&w=500" 
+                    src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=500" 
                     alt="Luxury Ivory Salon Interior dressing suite" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
@@ -475,8 +494,8 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-blush-pink shadow-soft aspect-[3/4]">
                   <img 
-                    src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=500" 
-                    alt="Bride Preparation Sessions" 
+                    src="/src/assets/images/saanvi_salon_masters_group_photo_1781930846268.jpg" 
+                    alt="Saanvi Salon Masters and Makeup Team" 
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
                   />
@@ -582,15 +601,57 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
       {/* ==================================================== */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center space-y-3 max-w-2xl mx-auto mb-16">
-          <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-rose-gold block">The Bridal Collections</span>
+        <div className="text-center space-y-3 max-w-2xl mx-auto mb-10">
+          <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-rose-gold block">Accessible Royalty</span>
           <h2 className="font-serif text-4xl font-light text-charcoal">
             The Bridal <span className="font-semibold text-rose-gold">Packages Suite</span>
           </h2>
           <div className="h-[2px] w-14 bg-gradient-to-r from-rose-gold to-soft-gold mx-auto" />
           <p className="text-xs text-soft-grey leading-relaxed">
-            Beautiful wedding invitation styled cards prepared with gold boundaries and rich Indian traditional settings.
+            Beautiful wedding invitation styled cards prepared with gold boundaries and rich Indian traditional settings. Every package is fully customizable to blend high-end luxury with budget-friendly values.
           </p>
+        </div>
+
+        {/* Cohesive Budget-Friendly Luxury Commitment Banner */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto">
+          <div className="bg-white border border-blush-pink/60 rounded-2xl p-5 shadow-soft flex items-start space-x-3.5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-baby-pink/30 rounded-bl-full" />
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-baby-pink text-rose-gold mt-0.5">
+              <Percent className="h-4.5 w-4.5" />
+            </div>
+            <div className="space-y-1">
+              <h4 className="font-serif text-sm font-bold text-charcoal">Curated To Your Budget</h4>
+              <p className="text-[11px] text-soft-grey leading-relaxed">
+                Don't pay for unnecessary additions. Mix, match, and tailor individual treatment modules to craft a bespoke package aligned exactly with your personal wedding plan.
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-blush-pink/60 rounded-2xl p-5 shadow-soft flex items-start space-x-3.5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-baby-pink/30 rounded-bl-full" />
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-baby-pink text-rose-gold mt-0.5">
+              <Sparkles className="h-4.5 w-4.5" />
+            </div>
+            <div className="space-y-1">
+              <h4 className="font-serif text-sm font-bold text-charcoal">Easy Installment Plans</h4>
+              <p className="text-[11px] text-soft-grey leading-relaxed">
+                Comfortable bridal finance management. Split your custom-molded package fees into 3 convenient, interest-free steps (Booking deposit, Trials session, & Wedding day balance).
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white border border-blush-pink/60 rounded-2xl p-5 shadow-soft flex items-start space-x-3.5 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-8 h-8 bg-baby-pink/30 rounded-bl-full" />
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-baby-pink text-rose-gold mt-0.5">
+              <Calendar className="h-4.5 w-4.5" />
+            </div>
+            <div className="space-y-1">
+              <h4 className="font-serif text-sm font-bold text-charcoal">Micro-Reservation Advance</h4>
+              <p className="text-[11px] text-soft-grey leading-relaxed">
+                Muhurtham dates fill rapidly. Instantly bind exclusive VIP styling dates on our team calendar with a gentle reservation advance of just ₹2,000, fully credited to your chosen card.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Packages Cards */}
@@ -713,33 +774,33 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
         {/* Custom interactive comparison component */}
         <div className="relative w-full h-[400px] sm:h-[500px] rounded-2xl overflow-hidden shadow-soft border border-blush-pink select-none">
           
-          {/* Before Face (Base prep canvas) */}
+          {/* After Face (Base canvas underneath) */}
           <img 
-            src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1000" 
-            alt="Before - Skin Preparation" 
-            className="absolute inset-0 w-full h-full object-cover" 
+            src="/src/assets/images/bride_after_fullface_1781933225011.jpg" 
+            alt="After - Royal Bridal Makeup" 
+            className="absolute inset-0 w-full h-full object-cover object-center" 
             referrerPolicy="no-referrer"
           />
-          <div className="absolute top-4 left-4 z-20 bg-charcoal/70 text-white text-[9px] font-sans font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-xs">
-            Dermal Prep Base (Before)
+          <div className="absolute top-4 left-4 z-20 bg-rose-gold text-white text-[9px] font-sans font-bold uppercase tracking-widest px-3 py-1.5 rounded-full backdrop-blur-xs">
+            Royal Shubh Vivah Glam (After)
           </div>
 
-          {/* After Face (Clipped Overlay with slide coordinate) */}
+          {/* Before Face (Clipped Overlay with slide coordinate on top) */}
           <div 
             className="absolute inset-0 z-10 overflow-hidden border-r-2 border-white/95"
             style={{ width: `${sliderVal}%` }}
           >
             <img 
-              src="https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=1000" 
-              alt="After - Royal Bridal Makeup" 
-              className="absolute inset-0 w-full h-full object-cover"
+              src="/src/assets/images/bride_before_fullface_1781933208391.jpg" 
+              alt="Before - Skin Preparation" 
+              className="absolute inset-0 w-full h-full object-cover object-center"
               style={{ width: '100%', height: '100%', maxWidth: 'none' }}
               referrerPolicy="no-referrer"
             />
-            {/* After Tag on the right top */}
+            {/* Before Tag on the right top */}
             {sliderVal > 15 && (
-              <div className="absolute top-4 right-4 z-20 bg-rose-gold text-white text-[9px] font-sans font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
-                Royal Shubh Vivah Glam (After)
+              <div className="absolute top-4 right-4 z-20 bg-charcoal/70 text-white text-[9px] font-sans font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-sm">
+                Dermal Prep Base (Before)
               </div>
             )}
           </div>
@@ -769,8 +830,8 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
         </div>
 
         <div className="pt-4 flex items-center justify-between text-xs text-soft-grey font-mono uppercase tracking-wide">
-          <span>&larr; Slide Left for Base Prep</span>
-          <span>Slide Right for Bridal Glam &rarr;</span>
+          <span>&larr; Slide Left for Bridal Glam</span>
+          <span>Slide Right for Base Prep &rarr;</span>
         </div>
 
       </section>
@@ -935,19 +996,19 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
               title: 'Pure Saffron Dermal Prep',
               category: 'Natural Skincare',
               summary: 'Soak three precious fibers of organic Kashmiri Saffron in warm raw goat/almond milk overnight. Gently massage into cheeks twice weekly to double skin radiance.',
-              img: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=500'
+              img: '/src/assets/images/saffron_dermal_prep_1781932915688.jpg'
             },
             {
               title: 'Karnataka Rose & Sandalwood Cleanser',
               category: 'Bridal Treatment',
               summary: 'Mix red rose petal powder with cold-pressed sandalwood pulp and fresh rainwater. Use as an active mask to soothe skin lipids and purge dirt.',
-              img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=500'
+              img: '/src/assets/images/rose_sandalwood_cleanser_1781932929138.jpg'
             },
             {
               title: 'Botanical Coconut Scalp Massage',
               category: 'Haircare Routine',
               summary: 'Mix virgin biological coconut oil with rosemary drops. Thoroughly massage in circular steps to boost hair thickness and seal structural hair cuticles.',
-              img: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=500'
+              img: '/src/assets/images/coconut_scalp_massage_1781932942106.jpg'
             }
           ].map((tip, idx) => (
             <div 
@@ -986,7 +1047,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
         <div className="text-center space-y-3 max-w-2xl mx-auto mb-12">
           <span className="font-sans text-xs font-bold uppercase tracking-[0.25em] text-rose-gold block">Follow Our Aesthetic</span>
           <h2 className="font-serif text-3xl font-light text-charcoal">
-            Follow Our Grid <span className="font-semibold text-rose-gold">@SaanviLounge</span>
+            Follow Our Grid <span className="font-semibold text-rose-gold">@SaanviSaalon</span>
           </h2>
           <p className="text-xs text-soft-grey font-sans">
             View real-time bridal transformations, intricate hairstyles, cosmetics closeups, and client moments.
@@ -995,12 +1056,10 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
 
         <div className="grid grid-cols-2 md:grid-cols-6 gap-4">
           {instagramFeed.map((post) => (
-            <a 
-              href="https://instagram.com" 
+            <button 
+              onClick={() => setActiveLightboxImg(post)}
               key={post.id}
-              target="_blank" 
-              rel="noreferrer"
-              className="group relative aspect-square overflow-hidden rounded-2xl bg-warm-ivory border border-blush-pink block"
+              className="group relative aspect-square overflow-hidden rounded-2xl bg-warm-ivory border border-blush-pink block w-full text-left cursor-pointer"
               id={`insta-item-grid-${post.id}`}
             >
               <img 
@@ -1017,7 +1076,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                   {post.type}
                 </span>
               </div>
-            </a>
+            </button>
           ))}
         </div>
 
@@ -1225,7 +1284,7 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
                   </a>
 
                   <a 
-                    href="https://wa.me/919885501034?text=Hello%20Saanvi%20Lounge%2C%20I%20am%20interested%20in%20reserving%20a%20bridal%20consultation" 
+                    href="https://wa.me/919885501034?text=Hello%20Saanvi%20Saalon%2C%20I%20am%20interested%20in%20reserving%20a%20bridal%20consultation" 
                     target="_blank"
                     rel="noreferrer"
                     className="rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-[10px] uppercase tracking-wider px-5 py-3.5 flex items-center space-x-1.5 transition-all hover:scale-103 shadow-xs cursor-pointer"
@@ -1242,6 +1301,93 @@ export default function HomeView({ setCurrentPage }: HomeViewProps) {
 
         </div>
       </section>
+
+      {/* Interactive Lightbox Modal */}
+      {activeLightboxImg && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md transition-all duration-300"
+          onClick={() => setActiveLightboxImg(null)}
+          id="lightbox-panel-modal"
+        >
+          {/* Close button */}
+          <button 
+            onClick={() => setActiveLightboxImg(null)}
+            className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer z-50 focus:outline-none focus:ring-2 focus:ring-rose-gold/50"
+            aria-label="Close lightbox"
+            id="btn-close-lightbox"
+          >
+            <X className="h-6 w-6" />
+          </button>
+
+          {/* Previous Arrow */}
+          <button 
+            onClick={handlePrevLightbox}
+            className="absolute left-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer z-50 focus:outline-none focus:ring-2 focus:ring-rose-gold/50"
+            aria-label="Previous image"
+            id="btn-prev-lightbox"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+
+          {/* Lightbox Content Card */}
+          <div 
+            className="relative max-w-4xl w-full bg-white rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row max-h-[85vh]"
+            onClick={(e) => e.stopPropagation()}
+            id="lightbox-content-card"
+          >
+            {/* Image Side */}
+            <div className="flex-1 bg-black flex items-center justify-center overflow-hidden aspect-square md:aspect-auto md:max-h-[85vh]">
+              <img 
+                src={activeLightboxImg.img} 
+                alt={activeLightboxImg.tag} 
+                className="w-full h-full object-contain max-h-[45vh] md:max-h-[85vh]" 
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            
+            {/* Info Side */}
+            <div className="w-full md:w-80 p-8 flex flex-col justify-between bg-warm-ivory border-t md:border-t-0 md:border-l border-blush-pink shrink-0">
+              <div className="space-y-4 text-left">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#B76E79]">Instagram Lookbook</span>
+                <h3 className="font-serif text-2xl font-light text-charcoal">{activeLightboxImg.type}</h3>
+                <p className="text-xl font-bold font-serif text-rose-gold">{activeLightboxImg.tag}</p>
+                <p className="text-xs text-soft-grey leading-relaxed">
+                  A gorgeous snapshot of premium bridal styling and aesthetics curated by Saanvi Saalon artisans. Follow us on Instagram for daily inspirations.
+                </p>
+              </div>
+
+              <div className="pt-6 space-y-3 border-t border-blush-pink/60">
+                <a 
+                  href="https://instagram.com" 
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="w-full rounded-full bg-rose-gold hover:bg-[#A35D68] text-white text-center font-bold text-xs uppercase tracking-wider py-3.5 flex items-center justify-center space-x-2 shadow-sm hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer"
+                  id="btn-visit-instagram-lightbox"
+                >
+                  <Instagram className="h-4 w-4" />
+                  <span>Visit Instagram Post</span>
+                </a>
+                <button
+                  onClick={() => setActiveLightboxImg(null)}
+                  className="w-full text-center text-xs text-soft-grey hover:text-charcoal transition-colors underline cursor-pointer"
+                >
+                  Close Preview
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Next Arrow */}
+          <button 
+            onClick={handleNextLightbox}
+            className="absolute right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer z-50 focus:outline-none focus:ring-2 focus:ring-rose-gold/50"
+            aria-label="Next image"
+            id="btn-next-lightbox"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+        </div>
+      )}
 
     </div>
   );

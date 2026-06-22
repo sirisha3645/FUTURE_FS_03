@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Menu, X, Sparkles, LayoutDashboard, Calculator, Calendar, FileText } from 'lucide-react';
+import { Menu, X, Sparkles, LayoutDashboard, Calculator, Calendar, Scissors } from 'lucide-react';
 
 interface NavbarProps {
   currentPage: string;
@@ -44,14 +44,14 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
           id="nav-logo"
         >
           <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-tr from-baby-pink via-blush-pink to-rose-gold shadow-md shadow-rose-gold/10 group-hover:scale-105 transition-transform duration-300">
-            <Sparkles className="h-5 w-5 text-rose-gold" />
+            <Scissors className="h-5 w-5 text-rose-gold" />
           </div>
           <div>
             <span className="font-serif text-2xl font-bold tracking-widest text-charcoal uppercase block leading-none">
               SAANVI
             </span>
             <span className="block text-[8.5px] tracking-[0.3em] font-semibold text-rose-gold uppercase mt-1">
-              Royal Bridal Lounge
+              Royal Bridal Saalon
             </span>
           </div>
         </button>
@@ -78,20 +78,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
 
         {/* Dynamic Utilities & Controls */}
         <div className="hidden sm:flex items-center space-x-3">
-          {/* Internship Report Button - custom styled to capture examiner attention */}
-          <button
-            onClick={() => handleNavClick('report')}
-            className={`flex h-10 items-center space-x-1.5 rounded-full px-5 text-xs font-bold border transition-all duration-300 ${
-              currentPage === 'report'
-                ? 'bg-rose-gold text-white border-rose-gold shadow-sm'
-                : 'bg-warm-ivory border border-rose-gold/30 text-[#B76E79] hover:bg-baby-pink/30 hover:scale-[1.01]'
-            }`}
-            id="btn-report-nav"
-          >
-            <FileText className="h-3.5 w-3.5" />
-            <span>Internship Report</span>
-          </button>
-
           {/* Premium Quiz Link - styled as secondary button: white background, rose-gold border */}
           <button
             onClick={() => handleNavClick('quiz')}
@@ -177,13 +163,6 @@ export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
             </button>
           ))}
           <div className="pt-4 border-t border-blush-pink flex flex-col space-y-2">
-            <button
-              onClick={() => handleNavClick('report')}
-              className="flex w-full items-center justify-center space-x-2 rounded-full bg-white border border-rose-gold py-2.5 text-xs font-bold text-rose-gold"
-            >
-              <FileText className="h-3.5 w-3.5" />
-              <span>Internship Technical Report</span>
-            </button>
             <button
               onClick={() => handleNavClick('quiz')}
               className="flex w-full items-center justify-center space-x-2 rounded-full bg-white border border-rose-gold py-2.5 text-xs font-bold text-rose-gold"

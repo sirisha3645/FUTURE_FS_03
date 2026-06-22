@@ -14,7 +14,7 @@ export const servicesData: ServiceItem[] = [
     duration: '150 mins',
     description: 'Our signature luxury bridal cosmetic look. Features premium high-definition makeup engineered to remain absolutely sweatproof, camera-ready, and flawless under heavy Indian wedding spotlights. Includes bespoke hand-applied lashes, luxury hydration base priming, neck and arm cosmetics, and professional dupattta and jewelry draping.',
     benefits: ['Bespoke HD base matching coordinates', 'Flawless 18-hour sweatproof durability', 'Includes dupatta setting & heavy jewelry pinning'],
-    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/royal_indian_bride_makeup_1781929843081.jpg'
   },
   {
     id: 'airbrush-makeup',
@@ -24,7 +24,7 @@ export const servicesData: ServiceItem[] = [
     duration: '120 mins',
     description: 'An advanced micro-mist cosmetic application using luxury siliconized pigments. It feels completely weightless, like a second skin, while delivering flawless coverage and a satin-soft airbrushed texture that excels in ultra-high-magnification 4K cameras.',
     benefits: ['Zero cakiness and absolute skin breathability', 'Perfect for outdoor weather and high humidity', 'Seamless coverage for pigmentation or micro-scars'],
-    image: 'https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/airbrush_makeup_treatment_1781934529385.jpg'
   },
   {
     id: 'engagement-makeup',
@@ -34,7 +34,7 @@ export const servicesData: ServiceItem[] = [
     duration: '90 mins',
     description: 'Crafted specifically for your Engagement or Sangeet ceremony. Features a luminous base with champagne highlighter accents, soft smokey eye shadows tailored to complement your lehenga or cocktail gown, and a velvety custom lip stain.',
     benefits: ['Dewy blush champagne-shimmer accents', 'Complements grand indoor venue lighting', 'Includes high-gloss setting lock spray'],
-    image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/engagement_makeup_sangeet_1781934546220.jpg'
   },
   {
     id: 'party-makeup',
@@ -44,7 +44,7 @@ export const servicesData: ServiceItem[] = [
     duration: '60 mins',
     description: 'Perfect for wedding guests, bridesmaids, or premium high-fashion occasions. Tailored around elegant minimalism or classic bold liners. Includes skin prepping, custom blush contouring, and false lash clusters.',
     benefits: ['Quick professional completion under 70 mins', 'Tailored to frame your facial highlights', 'Premium designer lashes included'],
-    image: 'https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/party_makeup_bridesmaid_1781934565849.jpg'
   },
   {
     id: 'hair-styling',
@@ -54,7 +54,7 @@ export const servicesData: ServiceItem[] = [
     duration: '60 mins',
     description: 'Expert sculpture hair-styling from traditional South Indian braids adorned with real fresh jasmine, complex messy buns, or modern Hollywood waves. Includes high-grade heat shield application, volume-boosting sprays, and secure pin-up holds.',
     benefits: ['Long-lasting hold that survives intense dancing', 'Tailored floral or hair jewelry integration support', 'Includes volume hair stuffing pads if required'],
-    image: 'https://images.unsplash.com/photo-1596178060810-729ab7912440?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/bridal_hair_styling_updo_1781934582981.jpg'
   },
   {
     id: 'hair-coloring',
@@ -64,7 +64,7 @@ export const servicesData: ServiceItem[] = [
     duration: '180 mins',
     description: 'Sophisticated hand-painted dimensional highlights designed to beautifully complement warm South Asian skin tones. Uses premium non-toxic ammonia-free gold clairol glosses that leave hair feeling soft, healthy, and ultra-luminous.',
     benefits: ['Seamless high-contrast gradient grow-out', 'Zero brassy tones with organic custom toner', 'Bond-building luxury nourishing sealant step'],
-    image: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/hair_coloring_balayage_1781934600348.jpg'
   },
   {
     id: 'hair-spa',
@@ -74,7 +74,7 @@ export const servicesData: ServiceItem[] = [
     duration: '75 mins',
     description: 'An advanced scalp and hair shaft nourishing ritual to breathe life back into damaged, colored, or dry hair. Features a micro-steam conditioning masque application, herbal rinse infusions, and an invigorating hot oil acupressure crown massage.',
     benefits: ['Soothes dry, chemically processed hair cuticles', 'Anti-frizz hair gloss booster for weeks', 'Deeply destresses crown muscles with hot steam'],
-    image: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/coconut_scalp_massage_1781932942106.jpg'
   },
   {
     id: 'facials',
@@ -84,7 +84,7 @@ export const servicesData: ServiceItem[] = [
     duration: '60 mins',
     description: 'A clinical resurfacing facial featuring painless vacuum suction that evacuates deep skin impurities, while instantly infusing deep dermal tissue with highly concentrated skin hydrators, vitamin C, and glutathione.',
     benefits: ['Clears pores, blackheads, and dead skin cells', 'Leaves tone instantly brightened with natural bounce', 'No redness, no downtime - exit glowing'],
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/pre_bridal_skincare_facial_1781931592613.jpg'
   },
   {
     id: 'skin-treatments',
@@ -94,7 +94,7 @@ export const servicesData: ServiceItem[] = [
     duration: '90 mins',
     description: 'A luxurious anti-aging non-invasive facial sculpting experience. Combines advanced manual lymphatic drainage, gold leaf infusion masks, and microcurrent therapy designed to stimulate facial muscle tone and tighten skin contours around the jawline.',
     benefits: ['Instant tightening and gorgeous cheekbone definition', 'Purges fluids under the eyes for a rested look', 'Imperial 24K real gold radiance glow'],
-    image: 'https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/saffron_dermal_prep_1781932915688.jpg'
   },
   {
     id: 'manicure',
@@ -104,7 +104,7 @@ export const servicesData: ServiceItem[] = [
     duration: '45 mins',
     description: 'Treat your hands like royalty. Includes a gentle saffron and almond milk warm hand soak, nail filing, precise dry cuticle work, skin massage with pure virgin coconut oils, and application of a high-shine LED gel color.',
     benefits: ['No chipping or peeling for up to 4 weeks', 'Deeply hydrates tired hands with warm herbal wrap', 'Reinforces soft brittle nail tips'],
-    image: 'https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'pedicure',
@@ -114,7 +114,7 @@ export const servicesData: ServiceItem[] = [
     duration: '65 mins',
     description: 'A glorious therapy for your feet. Features a soaking bath in fresh rose petals, goat milk, and honey. Safe callus exfoliation, gentle scrub, detailed cuticle shaping, and a premium massage using warm volcanic basalt stones.',
     benefits: ['Hydrates dry cracked calluses into baby-soft skin', 'Releases stiff joints and improves foot circulation', 'Classic or high-shine breathable gel varnish finish'],
-    image: 'https://images.unsplash.com/photo-1519415510236-8a5225a27161?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'nail-art',
@@ -134,7 +134,7 @@ export const servicesData: ServiceItem[] = [
     duration: '90 mins',
     description: 'Full-body restorative therapy. We use customized heated oils infused with traditional Indian active botanicals. Heated salt crystals are applied to acupressure nodes to melt muscular tightness and calm the neural matrix.',
     benefits: ['Combats chronic physical back stress and shoulders stiffness', 'Gently balances and detoxifies skin lipid barriers', 'Deep meditative relaxation for pre-wedding anxieties'],
-    image: 'https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'mehendi-services',
@@ -144,7 +144,7 @@ export const servicesData: ServiceItem[] = [
     duration: '240 mins',
     description: 'Incredibly detailed hand-drawn traditional Mehendi designs. Features intricate jaali, peafowls, lotuses, and beautiful mandalas representing marital unions. We use custom 100% organic home-rolled henna cones yielding deep, rich mahogany stains.',
     benefits: ['No synthetic chemicals, skin-safe organic brew', 'Outstanding deep maroon stain longevity', 'Expert fast-hand application of heavy classical layouts'],
-    image: 'https://images.unsplash.com/photo-1612547087680-aa16032af419?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/bridal_mehendi_pose_portrait_1781930949506.jpg'
   }
 ];
 
@@ -156,7 +156,7 @@ export const stylistsData: Stylist[] = [
     specialty: 'Contemporary Royal HD Makeup & Couture Draping',
     rating: 5.0,
     experience: '20 Years',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=500'
+    image: '/src/assets/images/saanvi_reddy_headshot_1781933765509.jpg'
   },
   {
     id: 'stylist-ananya',
@@ -165,7 +165,7 @@ export const stylistsData: Stylist[] = [
     specialty: 'Luminous Airbrushing & Dramatic Eyes',
     rating: 4.9,
     experience: '12 Years',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500'
+    image: '/src/assets/images/ananya_sen_headshot_1781933781463.jpg'
   },
   {
     id: 'stylist-priya',
@@ -174,7 +174,7 @@ export const stylistsData: Stylist[] = [
     specialty: 'Floral South Indian Braids & Complex Mehendi Mandalas',
     rating: 4.9,
     experience: '8 Years',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=500'
+    image: '/src/assets/images/priya_sharma_headshot_1781933796149.jpg'
   },
   {
     id: 'stylist-rohit',
@@ -183,7 +183,7 @@ export const stylistsData: Stylist[] = [
     specialty: 'HydraGlow Resurfacing & 24K Gold Collagen Lift',
     rating: 4.8,
     experience: '10 Years',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=500'
+    image: '/src/assets/images/dr_rohit_rao_headshot_1781933810578.jpg'
   }
 ];
 
@@ -210,13 +210,13 @@ export const galleryData: GalleryItem[] = [
     id: 'g4',
     title: 'Dense Intricate Lotus Bridal Mehendi Hands',
     category: 'mehendi',
-    image: 'https://images.unsplash.com/photo-1612547087680-aa16032af419?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1590156221122-c419eb376d56?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'g5',
     title: 'The Royal Champagne Bridal Salon VIP Suite',
     category: 'interior',
-    image: 'https://images.unsplash.com/photo-1600948836101-f9ffdb5965e5?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'g6',
@@ -230,11 +230,11 @@ export const galleryData: GalleryItem[] = [
     id: 'g7',
     title: 'Kanjeevaram Saree & Gold Border Saree Bride Look',
     category: 'engagement',
-    image: 'https://images.unsplash.com/photo-1610030469668-93535c17b6b3?auto=format&fit=crop&q=80&w=800'
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'g8',
-    title: 'Lounge Mirror & Polished Ivory Dressing Areas',
+    title: 'Saalon Mirror & Polished Ivory Dressing Areas',
     category: 'interior',
     image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=800'
   }
@@ -250,7 +250,7 @@ export const blogData: BlogPost[] = [
     author: 'Priya Sharma',
     date: 'June 5, 2026',
     readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&q=80&w=600',
+    image: '/src/assets/images/bridal_hair_care_secrets_1781931574668.jpg',
     tags: ['hairspa', 'hairgrowth', 'luxurycare']
   },
   {
@@ -262,7 +262,7 @@ export const blogData: BlogPost[] = [
     author: 'Saanvi Reddy',
     date: 'May 28, 2026',
     readTime: '6 min read',
-    image: 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=600',
+    image: '/src/assets/images/pre_bridal_skincare_facial_1781931592613.jpg',
     tags: ['prebridal', 'hydrafacial', 'skincareglow']
   },
   {
@@ -274,7 +274,7 @@ export const blogData: BlogPost[] = [
     author: 'Ananya Sen',
     date: 'May 15, 2026',
     readTime: '5 min read',
-    image: 'https://images.unsplash.com/photo-1583795128727-6ec3642408f8?auto=format&fit=crop&q=80&w=600',
+    image: '/src/assets/images/hd_airbrush_makeup_tools_1781930351401.jpg',
     tags: ['airbrush', 'bridalstyling', 'makeuptrend']
   }
 ];
@@ -339,7 +339,7 @@ export const membershipPlans = [
     name: 'Empress Maharani Elite',
     price: 15500,
     period: 'month',
-    description: 'The ultimate luxury grooming lounge access. Experience uncompromised pampering.',
+    description: 'The ultimate luxury grooming saalon access. Experience uncompromised pampering.',
     features: [
       'Unlimited luxury blowouts & botanical scalp washes',
       '1x 24K Gold Collagen Face Rejuvenation Facial',

@@ -335,7 +335,7 @@ export default function AdminDashboard() {
               {loginSubmitting ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <span>Unlocking Lounge Hub...</span>
+                  <span>Unlocking Saalon Hub...</span>
                 </>
               ) : (
                 <>
@@ -377,7 +377,7 @@ export default function AdminDashboard() {
           <div>
             <div className="flex items-center space-x-2.5 flex-wrap">
               <h1 className="font-serif text-3xl font-light text-charcoal">
-                Saanvi Royal <span className="font-semibold text-rose-gold">Admin Lounge</span>
+                Saanvi Royal <span className="font-semibold text-rose-gold">Admin Saalon</span>
               </h1>
               <span className="rounded-full bg-rose-gold/15 px-3 py-0.5 text-[9px] font-sans tracking-widest text-[#B76E79] font-bold uppercase border border-rose-gold/10">LIVE LEDGER</span>
             </div>

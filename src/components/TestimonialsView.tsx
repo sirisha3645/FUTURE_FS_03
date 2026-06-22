@@ -34,8 +34,8 @@ export default function TestimonialsView() {
     {
       id: 'r4',
       author: 'Sanjana Krishna',
-      role: 'Elite VIP Lounge Member',
-      text: 'Enrolling in the Saanvi Royal Gold membership was the best decision for my lifestyle. The priority reservation queue is highly valuable since Banjara Hills bridal lounges gets fully booked months in advance. Their herbal hair therapies are magic.',
+      role: 'Elite VIP Saalon Member',
+      text: 'Enrolling in the Saanvi Royal Gold membership was the best decision for my lifestyle. The priority reservation queue is highly valuable since Banjara Hills bridal saalons gets fully booked months in advance. Their herbal hair therapies are magic.',
       rating: 5,
       date: 'April 05, 2026',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200'
@@ -216,7 +216,7 @@ export default function TestimonialsView() {
                       <span>&bull;</span>
                       <span className="flex items-center space-x-1 text-rose-gold font-semibold">
                         <CheckCircle2 className="h-3.5 w-3.5 text-rose-gold" />
-                        <span>Verified Lounge Guest</span>
+                        <span>Verified Saalon Guest</span>
                       </span>
                     </div>
                   </div>
@@ -258,7 +258,7 @@ export default function TestimonialsView() {
             <div className="bg-white border border-blush-pink p-6 rounded-3xl shadow-soft space-y-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-rose-gold">Share Your Experience</h4>
               <p className="text-xs text-soft-grey leading-relaxed">
-                Had an elegant style or bridal make-up session at Saanvi Lounge? Log your thoughts below.
+                Had an elegant style or bridal make-up session at Saanvi Saalon? Log your thoughts below.
               </p>
               
               {success ? (

@@ -20,13 +20,13 @@ export default function AboutView() {
               Saanvi Studio was founded in Hyderabad by master stylist Saanvi Reddy with a simple, disruptive vision: to build a modern royal bridal sanctuary that merges traditional Vedic skincare rituals with elite, sweatproof high-definition cosmetics. We replace aggressive chemical bleaching with botanical saffron infusions, rosewater hydration, and customized care that let your natural warmth shine under grand wedding spotlights.
             </p>
             <p className="text-sm text-soft-grey leading-relaxed">
-              Today, our lounge is celebrated as South India's premium destination for bespoke Mehendi styling, ornate fresh-jasmine braid sculpting, and seamless airbrush makeovers. Every lotion, henna paste, and skin fluid we use is 100% organic, biocompatible, and crafted to deliver photogenic perfection for custom couture lehengas and sarees of any heritage.
+              Today, our saalon is celebrated as South India's premium destination for bespoke Mehendi styling, ornate fresh-jasmine braid sculpting, and seamless airbrush makeovers. Every lotion, henna paste, and skin fluid we use is 100% organic, biocompatible, and crafted to deliver photogenic perfection for custom couture lehengas and sarees of any heritage.
             </p>
           </div>
           <div className="lg:col-span-5 relative">
             <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-to-tr from-baby-pink to-blush-pink blur-2xl opacity-40 pointer-events-none" />
             <img 
-              src="https://images.unsplash.com/photo-1600948836101-f9ffdb5965e5?auto=format&fit=crop&q=80&w=800" 
+              src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" 
               alt="Ornate Traditional Royal Indian Wedding Decor" 
               className="rounded-3xl shadow-soft border border-blush-pink relative z-10"
               referrerPolicy="no-referrer"
