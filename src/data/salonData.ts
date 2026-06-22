@@ -114,7 +114,7 @@ export const servicesData: ServiceItem[] = [
     duration: '65 mins',
     description: 'A glorious therapy for your feet. Features a soaking bath in fresh rose petals, goat milk, and honey. Safe callus exfoliation, gentle scrub, detailed cuticle shaping, and a premium massage using warm volcanic basalt stones.',
     benefits: ['Hydrates dry cracked calluses into baby-soft skin', 'Releases stiff joints and improves foot circulation', 'Classic or high-shine breathable gel varnish finish'],
-    image: 'https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&q=80&w=600'
+    image: 'https://images.unsplash.com/photo-1519415510236-8a5225a27161?auto=format&fit=crop&q=80&w=600'
   },
   {
     id: 'nail-art',
