@@ -104,7 +104,7 @@ export const servicesData: ServiceItem[] = [
     duration: '45 mins',
     description: 'Treat your hands like royalty. Includes a gentle saffron and almond milk warm hand soak, nail filing, precise dry cuticle work, skin massage with pure virgin coconut oils, and application of a high-shine LED gel color.',
     benefits: ['No chipping or peeling for up to 4 weeks', 'Deeply hydrates tired hands with warm herbal wrap', 'Reinforces soft brittle nail tips'],
-    image: 'https://images.unsplash.com/photo-1632345031435-8797b2d58045?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/luxury_nude_manicure_1782101748934.jpg'
   },
   {
     id: 'pedicure',
@@ -114,7 +114,7 @@ export const servicesData: ServiceItem[] = [
     duration: '65 mins',
     description: 'A glorious therapy for your feet. Features a soaking bath in fresh rose petals, goat milk, and honey. Safe callus exfoliation, gentle scrub, detailed cuticle shaping, and a premium massage using warm volcanic basalt stones.',
     benefits: ['Hydrates dry cracked calluses into baby-soft skin', 'Releases stiff joints and improves foot circulation', 'Classic or high-shine breathable gel varnish finish'],
-    image: 'https://images.unsplash.com/photo-1519415510236-8a5225a27161?auto=format&fit=crop&q=80&w=600'
+    image: '/src/assets/images/luxury_pedicure_spa_1782101905725.jpg'
   },
   {
     id: 'nail-art',
